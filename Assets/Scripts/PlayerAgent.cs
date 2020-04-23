@@ -7,6 +7,7 @@ public class PlayerAgent : MonoBehaviour
 {
 
     public NavMeshAgent agent;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +31,7 @@ public class PlayerAgent : MonoBehaviour
 
 
         }
+
+        anim.SetFloat("Velocity",agent.velocity.magnitude);
     }
 }
